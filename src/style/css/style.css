@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans+HK:wght@300&family=Passions+Conflict&family=Roboto+Mono&display=swap");
+body {
+  font-family: "Roboto Mono";
+}
+
+section {
+  display: flex;
+  background-color: rgb(185, 58, 58);
+  height: 80vh;
+}
+
+.authenticate {
+  display: grid;
+  grid-auto-flow: row;
+  margin: auto;
+  width: 40%;
+  background-color: rgb(100, 100, 131);
+}
+.authenticate > * {
+  margin: auto;
+  width: 50%;
+}
+.authenticate button {
+  margin: auto;
+  font-family: "Roboto Mono";
+}
+
+.logdeco {
+  background-color: cyan;
+  height: 100%;
+  width: 50%;
+}
+.logdeco img {
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  --valid: lime;
+  --invlid: red;
+  --focus: yellow;
+}
+
+/*
+    input{
+    color: $InputDefaultColor ; 
+    font-family: $mainFont;
+    border: 3px solid var(--color, #ccc)       
+
+    }
+    input:focus{
+        --color: var(--focus); 
+    }
+
+    &:has(:valid){
+        --color: var(--valid)
+    }
+}
+*/
+.submitBtn {
+  margin: 50px 0 0 0;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

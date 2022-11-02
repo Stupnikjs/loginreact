@@ -1,0 +1,123 @@
+:root{
+    --valid: lime; 
+    --invlid: red; 
+    --focus: yellow; 
+}
+
+$focusColor: yellow;
+$InputDefaultColor: lightgrey; 
+$validColor : green; 
+$formHeight: 30vw; 
+$formWidth: 30vw; 
+
+.test{
+    margin: 20% auto;
+    height: $formHeight; 
+    width: $formWidth;
+}
+
+.background{
+    position: absolute;
+    background-color: transparent;
+    height: $formHeight; 
+    width: $formWidth;
+    padding: 20px;
+   
+    z-index: -1;
+    /*
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+   */
+
+}
+
+ .shape{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    
+}
+
+
+
+.shape#firstBallon{
+    position: absolute;
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+   top: -20%;
+   left: -20%;
+}
+
+
+
+.shape#secondBallon{
+    position: absolute;
+    background: linear-gradient(
+        #696e79,
+        #23a2f6
+    );
+    bottom: -5%;
+    right: -7%;
+    
+}
+form{
+    height: $formHeight; 
+    width: $formWidth;
+    margin: auto;
+    background-color: rgba(255,255,255,.13);
+    color: black; 
+    border-radius: 10px;
+    border: 2px solid rgba(83, 70, 70, 0.1);
+    z-index: 1;
+}
+
+
+
+
+form > *{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+    font-family: 'Poppins',sans-serif;
+    color: #3f3333;
+    letter-spacing: 0.5px;
+    width: 80%;
+  
+}
+
+svg{
+    margin-right: 5%;
+}
+
+
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+input{
+    
+    color: black;
+    height: 20px;
+    border: 1px solid rgba(102, 93, 93, 0.5);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+button{
+    width: 50%;
+    margin: auto;
+}
+

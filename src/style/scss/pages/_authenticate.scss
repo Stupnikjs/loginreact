@@ -6,7 +6,16 @@ $decoColor: cyan;
     position: absolute;
     height: 130vh;
     width: 100vw;
-    background-color: black;
+    background: linear-gradient(to left, cyan 0%, blue 100%);
     z-index: -2;
     top: 0
+}
+
+
+#login{
+    background: linear-gradient(to left, rgb(164, 184, 184) 0%, rgb(60, 184, 91) 100%);
+}
+
+#signin{
+    background: linear-gradient(to left, cyan 0%, blue 100%);
 }

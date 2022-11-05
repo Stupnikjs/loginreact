@@ -10,32 +10,28 @@ $validColor : green;
 $formHeight: 30vw; 
 $formWidth: 30vw; 
 
-.test{
-    margin: 20% auto;
+
+.encreBallon{
+    margin: 12% auto;
     height: $formHeight; 
     width: $formWidth;
 }
 
 .background{
     position: absolute;
+ 
     background-color: transparent;
     height: $formHeight; 
     width: $formWidth;
-    padding: 20px;
-   
+
     z-index: -1;
-    /*
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-   */
+ 
 
 }
 
  .shape{
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     position: absolute;
     border-radius: 50%;
     z-index: -1;
@@ -45,28 +41,26 @@ $formWidth: 30vw;
 
 
 .shape#firstBallon{
-    position: absolute;
     background: linear-gradient(
         #1845ad,
         #23a2f6
     );
-   top: -20%;
-   left: -20%;
+   top: -35%;
+   left: -37%;
 }
 
 
 
 .shape#secondBallon{
-    position: absolute;
     background: linear-gradient(
         #696e79,
         #23a2f6
     );
-    bottom: -5%;
-    right: -7%;
+    bottom: -35%;
+    right: -37%;
     
 }
-form{
+ form{
     height: $formHeight; 
     width: $formWidth;
     margin: auto;
@@ -79,12 +73,11 @@ form{
 
 
 
-
 form > *{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10% auto;
+    margin: 5% auto;
     font-family: 'Poppins',sans-serif;
     color: #3f3333;
     letter-spacing: 0.5px;
@@ -120,4 +113,6 @@ button{
     width: 50%;
     margin: auto;
 }
+
+
 

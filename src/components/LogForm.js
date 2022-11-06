@@ -53,26 +53,26 @@ const LogForm = (props) => {
                 method: 'POST', // *GET, POST, PUT, DELETE, etc.
                 mode: 'cors', // no-cors, *cors, same-origin
                 cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-                credentials: 'same-origin', // include, *same-origin, omit
+                credentials: 'include', // include, *same-origin, omit
                 headers: {
-                'Content-Type': 'application/json'
-                // 'Content-Type': 'application/x-www-form-urlencoded',
+                'Content-Type': 'application/json', 
+                'Access-Control-Allow-Credentials': true, 
+                'Accept': "*/*"
+
         },
                 redirect: 'follow', // manual, *follow, error
-                referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+                referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
                 body: datatopost  // body data type must match "Content-Type" header
             })
+            
             .then( data => data.json() )
-            .then( data => data.toString())
             .then( data => {
                 if (page === "login") { 
                 window.location.href = `http://localhost:3000/profile/${data}`}
                 else if (page === "signin") {  
-                    window.location.href = `http://localhost:3000/signin`
+                    window.location.href = `http://localhost:3000/login`
                 }
-            })
-
-             
+            })      
      
     }
 

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans+HK:wght@300&family=Passions+Conflict&family=Roboto+Mono&display=swap'); 
 
 $mainFont: "Roboto Mono"; 
-
+$zoneVideoColor: rgb(126, 207, 245); 
 body{
     font-family: $mainFont; 
     margin: 0
@@ -10,5 +10,8 @@ body{
 
 
 @import "./pages/authenticate"; 
-@import "./components/logForm"
+@import "./pages/profile"; 
+@import "./components/logForm"; 
+@import "./components/imageGenerator"; 
+@import "./components/zoneVideos"; 
 

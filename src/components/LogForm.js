@@ -39,32 +39,30 @@ const LogForm = (props) => {
         if(e.target.name === "username") setUsername(e.target.value)
         if(e.target.name === "email") setEmail(e.target.value)
         if(e.target.name === "password") setPassword(e.target.value) 
-        console.log(username) 
-        console.log(email) 
     }
 
+    const fetchOptions = {
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        mode: 'cors', // no-cors, *cors, same-origin
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: 'include', // include, *same-origin, omit
+        headers: {
+        'Content-Type': 'application/json', 
+        'Access-Control-Allow-Credentials': true, 
+        'Accept': "*/*"
+
+},
+        redirect: 'follow', // manual, *follow, error
+        referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        body: ""  // body data type must match "Content-Type" header
+    }
     const submit = (e) => {
         e.preventDefault()
         const datatopost = getData()
+        fetchOptions.body = datatopost
         console.log(fetchUrl)
         // faire varier l'url en fontion du state 
-        
-             fetch(fetchUrl, {
-                method: 'POST', // *GET, POST, PUT, DELETE, etc.
-                mode: 'cors', // no-cors, *cors, same-origin
-                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-                credentials: 'include', // include, *same-origin, omit
-                headers: {
-                'Content-Type': 'application/json', 
-                'Access-Control-Allow-Credentials': true, 
-                'Accept': "*/*"
-
-        },
-                redirect: 'follow', // manual, *follow, error
-                referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-                body: datatopost  // body data type must match "Content-Type" header
-            })
-            
+             fetch(fetchUrl,fetchOptions)
             .then( data => data.json() )
             .then( data => {
                 if (page === "login") { 

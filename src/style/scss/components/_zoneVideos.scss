@@ -1,0 +1,35 @@
+.zoneVideo{
+    height: 80vh;
+    width: 90%; 
+    display: flex ;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+      /*repeat(auto, minmax(20px ))*/
+    background-color: $zoneVideoColor;
+    margin: auto;
+   padding: 2%;
+   border: 4px black;
+   border-style: ridge; 
+
+}
+
+.video{
+    
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    background-color: rgb(125, 180, 228);
+    border: 2px solid black;
+
+}
+
+.video:hover{
+    background-color: rgb(99, 97, 182);
+    & > * {
+        color: red;
+        scale: 4;
+    }
+}

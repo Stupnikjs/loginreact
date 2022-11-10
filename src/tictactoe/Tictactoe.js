@@ -24,9 +24,9 @@ const Tictactoe = (props) => {
         
 
         if (gameover) {
-            console.log("gameover")
+           // fetch to post to user's profile 
         }
-    },[grid])
+    },[grid, gameover])
 
     return (
         <div className='tictactoe'>

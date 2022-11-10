@@ -1,0 +1,30 @@
+.chessBoard{
+    margin: auto;
+    display: grid;
+    height: 70vh;
+    width: 70vw;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.white{
+    background-color: white;
+}
+.black{
+    background-color: black;
+}
+.piece{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chesspiece{
+    font-size: 3rem;
+
+    stroke: rgb(98, 136, 120);
+    stroke-width: 10px;
+
+    
+   
+}

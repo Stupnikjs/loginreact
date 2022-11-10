@@ -18,7 +18,8 @@ function App() {
         <Route path="/login" element={<Login type="login" />}></Route>
         <Route path="/signin" element={<Login type="signin" />}></Route>    
         <Route path="/profile" element={<Profile></Profile>}/>
-        <Route path="/morpion" element={<GamePlatform></GamePlatform>}/>
+        <Route path="/morpion" element={<GamePlatform game="tictactoe"></GamePlatform>}/>
+        <Route path="/echec" element={<GamePlatform game="chess"></GamePlatform>}/>
       </Routes>
     </BrowserRouter>
   );

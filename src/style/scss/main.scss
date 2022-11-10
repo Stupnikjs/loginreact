@@ -3,15 +3,20 @@
 
 $mainFont: "Roboto Mono"; 
 $zoneVideoColor: rgb(126, 207, 245); 
+$profileBgGreen: rgb(30, 85, 95); 
+
+
 body{
     font-family: $mainFont; 
-    margin: 0
+    margin: 0; 
 }
 
-
+@import "./keyframes/keyframes.scss"; 
 @import "./pages/authenticate"; 
 @import "./pages/profile"; 
+@import "./pages/gameBoard"; 
 @import "./components/logForm"; 
-@import "./components/imageGenerator"; 
-@import "./components/zoneVideos"; 
+@import "./components/zoneGame";
+@import "./components/tictactoe";  
+
 

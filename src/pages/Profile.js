@@ -1,7 +1,7 @@
 import React, { useEffect} from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ZoneVideo from '../components/ZoneVideo';
+import ZoneGame from '../components/ZoneGame';
 import Present from '../components/Present';
 
 
@@ -11,7 +11,7 @@ const Profile = (props) => {
     const {id} = useParams()
     const [user, setUser] = useState('')
     
-
+    
    
     
     const fetchData = async (url, method, data) => {
@@ -34,12 +34,14 @@ const Profile = (props) => {
         fetchData(`http://localhost:4000/profile/${id}`, "GET")
         .then( data => data.json())
         .then( data => setUser(data))
-    }, )
+        
+    },[id] )
 
     return (
         <div className='profile'>
             <Present user={user}></Present>
-           <ZoneVideo/>
+           <ZoneGame userid={id}/>
+           <ZoneGame userid={id}/>
            
         </div>
     );

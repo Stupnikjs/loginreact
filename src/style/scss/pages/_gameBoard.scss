@@ -1,0 +1,16 @@
+.gameBoard{
+    background-color: $zoneVideoColor;
+    height: 130vh;
+    
+    h1{
+        text-align: center;
+        margin-top: 0;
+    }
+    .moovingelement{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: red; 
+        animation: mooveTarget infinite 4s forwards;
+    }
+}

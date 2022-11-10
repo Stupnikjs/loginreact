@@ -1,0 +1,30 @@
+<p>Choisi une région </p>
+            <map name="image-map">
+                <area onClick={selectContinent} onMouseOver={hover}  target="_parent" alt="northamerica" title="northamerica" href="#" coords="183,188,126,167,98,136,-1,108,14,64,149,42,219,70,242,109,204,177" shape="poly"/>
+                <area onClick={selectContinent} onMouseOver={hover} target="" alt="southamerica" title="southamerica" href="#" coords="197,327,283,214,214,173,169,195" shape="poly"/>
+                <area onClick={selectContinent} onMouseOver={hover} target="" alt="africa" title="africa" href="#" coords="373,276,431,250,432,190,393,145,346,126,311,141,297,171" shape="poly"/>
+                <area onClick={selectContinent} onMouseOver={hover} target="" alt="europe" title="europe" href="#" coords="283,73,320,136,394,135,431,114,440,95,441,80,445,54" shape="poly"/>
+                <area onClick={selectContinent} onMouseOver={hover}target="" alt="asia" title="asia" href="#" coords="391,143,430,187,491,202,548,206,585,169,609,152,636,128,679,79,661,57,553,51,519,45,469,53,447,53,441,101" shape="poly"/>
+                <area onClick={selectContinent} onMouseOver={hover} target="" alt="oceania" title="oceania" href="#" coords="679,300,546,300,509,255,497,205,552,207,569,187,586,175,655,178,679,211" shape="poly"/>
+            </map>
+            <div className='imageAndContinent'>
+                <img src={planisphere} usemap="#image-map"/>
+                <aside>{continentHover}</aside>
+            </div>
+            <section>
+                <h2 className={choosenAlready ? "choosen" : "notchoosen"}>Vous avez choisi {continentSelected}</h2>
+            </section>
+            
+
+    const hover = (e) => {
+    setContinentHover(e.target.alt)
+    }
+    const selectContinent = (e) => {
+        if (!choosenAlready){ 
+            setContinentSelected(e.target.alt)
+            setChoosenAlready(true)
+    }
+}
+    const [continentHover, setContinentHover] = useState()
+    const [continentSelected, setContinentSelected] = useState()
+    const [choosenAlready, setChoosenAlready] = useState(false)

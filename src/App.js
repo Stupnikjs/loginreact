@@ -1,19 +1,24 @@
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import SecretWrapper from "./components/SecretWrapper";
-import Authenticate from "./pages/Authenticate";
+import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import GamePlatform from "./pages/GamePlatform";
+import Tictactoe from "./tictactoe/Tictactoe";
 
+// <Route path="/profile/:id" element={<SecretWrapper />}></Route>
  
 
 import "./style/scss/main.scss"
+
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<Authenticate type="login" />}></Route>
-        <Route path="/signin" element={<Authenticate type="signin" />}></Route>    
-        <Route path="/profile/:id" element={<SecretWrapper />}></Route>
+        <Route path="/login" element={<Login type="login" />}></Route>
+        <Route path="/signin" element={<Login type="signin" />}></Route>    
+        <Route path="/profile" element={<Profile></Profile>}/>
+        <Route path="/morpion" element={<GamePlatform></GamePlatform>}/>
       </Routes>
     </BrowserRouter>
   );

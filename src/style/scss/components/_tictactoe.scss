@@ -1,0 +1,34 @@
+.tictactoe{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 50vh;
+    margin: auto;
+    width: 50%;
+    background-color: $zoneVideoColor;
+    gap: 2px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.case {
+    background-color: rgb(212, 157, 219);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.caseclicked{
+    input, label{
+    display: none;
+    }
+
+}
+
+.notshown{
+    display: none;
+}
+

@@ -17,8 +17,8 @@ const LogForm = (props) => {
        
         let indexSlash = window.location.href.indexOf('3000'); 
         setPage(window.location.href.substring(indexSlash+5)); 
-        if (props.opositetype === "login") setFetchUrl("http://localhost:4000/post") 
-        if (props.opositetype === "signin") setFetchUrl("http://localhost:4000/login") 
+        if (props.type === "login") setFetchUrl("http://localhost:4000/signin") 
+        if (props.type === "signin") setFetchUrl("http://localhost:4000/login") 
        
 
     }, [page, props]) 

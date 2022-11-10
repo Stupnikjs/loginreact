@@ -1,7 +1,11 @@
-.zoneVideo{
+.zoneGame{
+    h1{
+        text-align: center;
+    }
+   
     height: 80vh;
-    width: 90%; 
-    display: flex ;
+    max-width: 800px; 
+    width: 90%;
     justify-content: center;
     gap: 5px;
     flex-wrap: wrap;
@@ -14,22 +18,33 @@
 
 }
 
-.video{
-    
+
+.gameChoice{
+    height: 60vh;
+    display: flex;
+    gap:5px;
+}
+
+.gameCard{ 
     width: 30%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 30%;
     background-color: rgb(125, 180, 228);
-    border: 2px solid black;
+    border: 3px dotted blue;
+    font-size: 0.8rem;
 
 }
 
-.video:hover{
-    background-color: rgb(99, 97, 182);
-    & > * {
-        color: red;
-        scale: 4;
-    }
+
+.choosen{
+    display: block;
 }
+
+.notchoosen{
+    display:none
+}
+
+

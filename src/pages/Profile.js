@@ -1,8 +1,10 @@
 import React, { useEffect} from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Header from '../components/Header';
 import ZoneGame from '../components/ZoneGame';
-import Present from '../components/Present';
+import ZoneScore from '../components/ZoneScore';
+
 
 
 
@@ -39,10 +41,9 @@ const Profile = (props) => {
 
     return (
         <div className='profile'>
-            <Present user={user}></Present>
-           <ZoneGame userid={id}/>
-           <ZoneGame userid={id}/>
-           
+            <Header></Header>
+           <ZoneGame userid={id}/>  
+           <ZoneScore userid={id}/>    
         </div>
     );
 };

@@ -33,7 +33,7 @@ const ChessBoard = () => {
         createPiece(5, [1, 0], "white", 8), 
         createPiece(5, [1, 1], "white", 9), 
         createPiece(5, [1, 2], "white", 10), 
-        createPiece(5, [4, 3], "white", 11), 
+        createPiece(5, [1, 3], "white", 11), 
         createPiece(5, [1, 4], "white", 12), 
         createPiece(5, [1, 5], "white", 13), 
         createPiece(5, [1, 6], "white", 14), 

@@ -15,8 +15,10 @@ body{
 @import "./pages/authenticate"; 
 @import "./pages/profile"; 
 @import "./pages/gameBoard"; 
+@import "./components/header"; 
 @import "./components/logForm"; 
 @import "./components/zoneGame";
+@import "./components/zoneScore";
 @import "./components/tictactoe";  
 @import "./components/chess";  
 

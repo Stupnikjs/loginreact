@@ -16,57 +16,89 @@ const ChessBoard = () => {
 ]
 
     const boardPiece = ["Rook", "Knight", "Bishop", "Queen", "King", "Pawn"]
+    
 
-
-    const getPiece = (index, ind) => {
-        if (index === 0 || index === 7){
-            switch(ind){
-                case 0: return boardPiece[0]; 
-                case 1: return boardPiece[1]; 
-                case 2: return boardPiece[2]; 
-                case 3: return boardPiece[3]; 
-                case 4: return boardPiece[4]; 
-                case 5: return boardPiece[2]; 
-                case 6: return boardPiece[1]; 
-                case 7: return boardPiece[0]; 
-            }
-            
-        } else if (index === 1 || index === 6) return boardPiece[5]; 
-        else return ""
+    const initPieces = () => {
+      
+      
+      
+        return  [createPiece(0, [0, 0], "white", 0), 
+        createPiece(1, [0, 1], "white", 1), 
+        createPiece(2, [0, 2], "white", 2), 
+        createPiece(3, [0, 3], "white", 3), 
+        createPiece(4, [0, 4], "white", 4), 
+        createPiece(2, [0, 5], "white", 5), 
+        createPiece(1, [0, 6], "white", 6), 
+        createPiece(0, [0, 7], "white", 7), 
+        createPiece(5, [1, 0], "white", 8), 
+        createPiece(5, [1, 1], "white", 9), 
+        createPiece(5, [1, 2], "white", 10), 
+        createPiece(5, [4, 3], "white", 11), 
+        createPiece(5, [1, 4], "white", 12), 
+        createPiece(5, [1, 5], "white", 13), 
+        createPiece(5, [1, 6], "white", 14), 
+        createPiece(5, [1, 7], "white", 15), 
+    ]
     }
+
+    const createPiece = (indexPiece, arr, color, id) => {
+           return  {
+                id: id, 
+                fonction: boardPiece[indexPiece], 
+                coordinates: arr, 
+                color: color, 
+            } 
+    }
+    const [pieces, setPieces] = useState(initPieces())
+    
+    function parser(pieces){
+        return pieces.fonction
+    }
+
+   function testequality(arr, index, id){
+    if (arr[0] === index && arr[1]=== id) return true
+   } 
+   function returnIndexOfMatchCoordonate(pieces, index, id){
+       
+      let pieceThatMatch = pieces.find(piece => testequality(piece.coordinates, index, id)) 
+      if (pieceThatMatch != undefined) {console.log(pieceThatMatch); return pieceThatMatch.id}
+      else return "notfound"
+   }
+
+
 
     const InitBoard = () => {
         return board.map(
             (element, index) => {
                 return (element.map((elt,ind) => {
                 
-                return <ChessCase 
-                
-                coordinate={[index, ind]} 
+                    // id de la piece qui a les coordonnées de la case 
+                var id = returnIndexOfMatchCoordonate(pieces, index, ind)
+                return <ChessCase  
                 type={elt} id={ind+ 8*index}
-                piece={getPiece(index, ind)}
-                key={ind+ 8*index}
+                key={(ind+ index*8)}
+                // passe la piece  
+                piece={pieces[id]}
+                
                 />
             })   
         )})
     }
 
-    const updateBoardGame = () => {
 
-    }
-
+    
     const [boardGame, setBoardGame] = useState(InitBoard()) 
     
-    const [pieces, setPieces] = useState([
-        {id: 0, coordinate: [0, 0]}, {id: 1, coordinate: [0, 1]}, {id: 2, coordinate: [0, 2] }, {id: 3, coordinate: [0, 3]}, {id: 4, coordinate: [0, 4]},  {id: 5,  coordinate: [0, 5]},  
-        {id: 6, coordinate: [0, 6]},  {id: 7,  coordinate: [0, 7]},  {id: 8,  coordinate: [1, 0]},   {id: 9,  coordinate: [1, 1]},  {id: 10, coordinate: [1, 2]},  {id: 11, coordinate: [1, 3]},  
-        {id: 12, coordinate: [1, 4]}, {id: 13, coordinate: [1, 5]},  {id: 14, coordinate: [1, 6]},  {id: 15, coordinate: [1, 7]} ])
 
 
     useEffect(() => {
-        // setBoardGame()
+ 
 
     }, [])
+
+ 
+
+    
     return (
         <div className='chessBoard'>
             {

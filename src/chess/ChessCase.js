@@ -5,16 +5,20 @@ import { faChessKing, faChessKnight,faChessPawn, faChessRook, faChessBishop, faC
 import { useState } from 'react';
 
 const ChessCase = (props) => {
-    const [icon, setIcon] = useState(faChessPawn)
+    const [icon, setIcon] = useState()
 
     useEffect(() =>{
+        console.log(props)
+        if (props.piece !== undefined){
+            if (props.piece.fonction === "Rook") setIcon(faChessRook)
+            if (props.piece.fonction === "Bishop") setIcon(faChessBishop)
+            if (props.piece.fonction === "Knight") setIcon(faChessKnight)
+            if (props.piece.fonction === "King") setIcon(faChessKing)
+            if (props.piece.fonction === "Queen") setIcon(faChessQueen)
+            if (props.piece.fonction === "Pawn") setIcon(faChessPawn)
+            if (props.piece.fonction === "blank") setIcon("")
+        }
         
-        if (props.piece === "Rook") setIcon(faChessRook)
-        if (props.piece === "Bishop") setIcon(faChessBishop)
-        if (props.piece === "Knight") setIcon(faChessKnight)
-        if (props.piece === "King") setIcon(faChessKing)
-        if (props.piece === "Queen") setIcon(faChessQueen)
-        if (props.piece === "") setIcon(undefined)
         
     }, [props.piece])
     return (

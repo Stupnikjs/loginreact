@@ -1,21 +1,19 @@
-$logColor: rgba(100, 100, 131, 0.13); 
-$decoColor: cyan; 
-
-
 .authenticate{
-    position: absolute;
-    height: 130vh;
-    width: 100vw;
-    background: linear-gradient(to left, cyan 0%, blue 100%);
-    z-index: -2;
-    top: 0
+    height: 120vh;
+    background-color: aliceblue;
 }
 
-
-#login{
-    background: linear-gradient(to left, rgb(164, 184, 184) 0%, rgb(60, 184, 91) 100%);
+.logcontainer{
+    display: flex;
+    height: 50vh;
+    width: 80%;
+    margin: auto;
+    padding: 10% 0;
 }
 
-#signin{
-    background: linear-gradient(to left, cyan 0%, blue 100%);
+.otherside{
+    background-color: $backgroundGreen;
+    height: 100%;
+    width: 50%;
 }
+

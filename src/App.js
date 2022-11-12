@@ -1,6 +1,6 @@
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import SecretWrapper from "./components/SecretWrapper";
-import Login from "./pages/Login";
+import Login from "./login/Login";
 import Profile from "./pages/Profile";
 import GamePlatform from "./pages/GamePlatform";
 import Tictactoe from "./tictactoe/Tictactoe";

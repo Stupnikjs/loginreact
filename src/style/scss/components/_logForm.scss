@@ -1,117 +1,38 @@
-:root{
-    --valid: lime; 
-    --invlid: red; 
-    --focus: yellow; 
-}
+.logFormContainer{
 
-$focusColor: yellow;
-$InputDefaultColor: lightgrey; 
-$validColor : green; 
-$formHeight: 30vw; 
-$formWidth: 30vw; 
-
-
-.encreBallon{
-    margin: 12% auto;
-    height: $formHeight; 
-    width: $formWidth;
-}
-
-.background{
-    position: absolute;
-    background-color: transparent;
-    height: $formHeight; 
-    width: $formWidth;
-
-    z-index: -1;
- 
-
-}
-
- .shape{
-    height: 150px;
-    width: 150px;
-    position: absolute;
-    border-radius: 50%;
-    z-index: -1;
-    
-}
-
-
-
-.shape#firstBallon{
-    background: linear-gradient(
-        #1845ad,
-        #23a2f6
-    );
-   top: -35%;
-   left: -37%;
-}
-
-
-
-.shape#secondBallon{
-    background: linear-gradient(
-        #696e79,
-        #23a2f6
-    );
-    bottom: -35%;
-    right: -37%;
-    
-}
- form{
-    height: $formHeight; 
-    width: $formWidth;
+    width: 50%;
+    height: 100%;
     margin: auto;
-    background-color: rgba(255,255,255,.13);
-    color: black; 
-    border-radius: 10px;
-    border: 2px solid rgba(83, 70, 70, 0.1);
-    z-index: 1;
-}
-
-
-
-form > *{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5% auto;
-    font-family: 'Poppins',sans-serif;
-    color: #3f3333;
-    letter-spacing: 0.5px;
-    width: 80%;
-  
-}
-
-svg{
-    margin-right: 5%;
-}
-
-
-form h3{
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 42px;
-    text-align: center;
+    background-color: $zoneVideoColor;
+    h1{
+        text-align: center;
+    }
+    
 }
 
 input{
-    
-    color: black;
-    height: 20px;
-    border: 1px solid rgba(102, 93, 93, 0.5);
-    border-radius: 3px;
-    padding: 0 10px;
-    margin-top: 8px;
-    font-size: 14px;
-    font-weight: 300;
-}
+    box-sizing: border-box;
 
-button{
+   }
+
+.logForm{
+   background-color: beige;
+   width: 50%;
+   display: grid;
+   margin: auto;
+   /*
+   & > * {
+    display: grid;
+    grid-auto-flow: row;
     width: 50%;
-    margin: auto;
-}
+   &>*{
+    grid-row: 1;
+    max-width: 80%;
+    display: inline-block;
+   }
+   */
 
-
+   }
+   
+   
 

@@ -75,22 +75,25 @@ const LogForm = (props) => {
     }
 
     return (
-            <form onSubmit={submit}>
+            <div className='logFormContainer'>
                 <h1>{props.type}</h1>
-                <div className='name'>
-                    <FontAwesomeIcon icon={faPerson}></FontAwesomeIcon>
-                    <input  type="text" name="username"  placeHolder="name"  onChange={getInputValue}/>
-                </div>
-                <div className='email'>
-                    <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
-                    <input name='email'  type="email" placeHolder="email"  onChange={getInputValue}/>
-                </div>
-                <div className='password'>
-                    <FontAwesomeIcon icon={faLock}></FontAwesomeIcon>
-                    <input type="password" name="password" placeHolder="password"  onChange={getInputValue}  />
-                </div>
-                <button type='submit'className='submitBtn'> Submit </button>
-            </form>
+                 <form className="logForm" onSubmit={submit}>
+                    <div className='name'>
+                        <FontAwesomeIcon icon={faPerson}></FontAwesomeIcon>
+                        <input  type="text" name="username"  placeHolder="name"  onChange={getInputValue}/>
+                    </div>
+                    <div className='email'>
+                        <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>
+                        <input name='email'  type="email" placeHolder="email"  onChange={getInputValue}/>
+                    </div>
+                    <div className='password'>
+                        <FontAwesomeIcon icon={faLock}></FontAwesomeIcon>
+                        <input type="password" name="password" placeHolder="password"  onChange={getInputValue}  />
+                    </div>
+                    <button type='submit'className='submitBtn'> Submit </button>
+                </form>
+            </div>
+           
     );
 };
 

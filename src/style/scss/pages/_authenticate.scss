@@ -29,33 +29,52 @@
     align-items: center;
     
 
-    .door{
-        height: 60%;
-        width: 50%;
-        background-color: black;
-        border: 5px solid rgb(159, 150, 150);
-        outline: 5px solid white;
-        position: relative;
-        perspective: 200px;
-        perspective-origin: left;
+   
 
-        &:hover{
-            transform: rotateY(60deg);
-            
-        }
-        
-        
+        .doorframe {
+             height: 70%;
+             width: 60%; 
+             border: 4px solid black;
+             display: flex;
+             perspective: 1200px;
+             transform-style: preserve-3d;
+            box-shadow: inset 2rem 2rem  rgb(37, 33, 33), inset -2rem -2rem  rgb(37, 33, 33), inset 3rem 3rem  $zoneVideoColor,
+             inset -3rem -3rem  $zoneVideoColor,
+
+          }
+          
+          .door {
+            background-color: rgb(178, 203, 176);
+            flex-grow: 1;
+            // transform-style: preserve-3d;
+            transform-origin: left center;
+            transition: all 0.5s;
+            // backface-visibility: hidden;
+            position: relative;
+          }
+          
+
+          .door:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            backface-visibility: hidden;  /* invisibilise l'arriere */
+            transform-style: preserve-3d;  
+            transform: rotateY(180deg);
+          }
+          /*
+          .doorframe:focus .door,
+          .doorframe:hover .door {
+           transform: rotate3d(0, 1, 0, -60deg);
+          } 
+          */
+          
+
     }
-    .backdoor{
-        background-color: blanchedalmond;
-        position: absolute;
-        top: 0; 
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: -1;
+    
 
-    }
 
-}
 

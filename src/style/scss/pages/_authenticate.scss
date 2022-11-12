@@ -1,19 +1,61 @@
 .authenticate{
-    height: 120vh;
-    background-color: aliceblue;
+  height: 120vh;
+}
+
+.mainSquare{
+   height: 60vh;
+   width: 50%;
+   display: flex;
+   margin: 20% auto;
 }
 
 .logcontainer{
-    display: flex;
-    height: 50vh;
-    width: 80%;
-    margin: auto;
-    padding: 10% 0;
+    width: 50%;
+    background-color: $zoneVideoColor;
+    height: 100%;
 }
+
+
+   
+   
+
 
 .otherside{
     background-color: $backgroundGreen;
     height: 100%;
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    .door{
+        height: 60%;
+        width: 50%;
+        background-color: black;
+        border: 5px solid rgb(159, 150, 150);
+        outline: 5px solid white;
+        position: relative;
+        perspective: 200px;
+        perspective-origin: left;
+
+        &:hover{
+            transform: rotateY(60deg);
+            
+        }
+        
+        
+    }
+    .backdoor{
+        background-color: blanchedalmond;
+        position: absolute;
+        top: 0; 
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+
+    }
+
 }
 

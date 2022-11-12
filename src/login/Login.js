@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import Ballons from '../components/Ballon';
+import React, { useEffect } from 'react';
+
 import LogForm from './LogForm';
-import { Link } from 'react-router-dom';
+
 import OtherSide from './OtherSide';
 
 
@@ -15,10 +15,13 @@ const Login = (props) => {
 
     return (  
             <div className='authenticate'>
-                <div className='logcontainer'>
-                <LogForm type={props.type}></LogForm>
-                <OtherSide></OtherSide>
+                <div className='mainSquare'>
+                    <div className='logcontainer'>
+                    <LogForm type={props.type}></LogForm>
+                    </div>
+                    <OtherSide></OtherSide>
                 </div>
+                
             </div>
     );
 };

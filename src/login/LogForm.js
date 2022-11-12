@@ -76,8 +76,9 @@ const LogForm = (props) => {
 
     return (
             <div className='logFormContainer'>
-                <h1>{props.type}</h1>
+                
                  <form className="logForm" onSubmit={submit}>
+                    <h1>{props.type}</h1>
                     <div className='name'>
                         <FontAwesomeIcon icon={faPerson}></FontAwesomeIcon>
                         <input  type="text" name="username"  placeHolder="name"  onChange={getInputValue}/>

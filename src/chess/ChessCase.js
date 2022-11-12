@@ -20,7 +20,7 @@ const ChessCase = (props) => {
         }
         
         
-    }, [props.piece])
+    }, [props])
     return (
         <div className={props.type === 0 ? "piece black" : "piece white"}>
            <ChessPiece icon={icon}></ChessPiece> 

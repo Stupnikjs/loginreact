@@ -1,38 +1,40 @@
 .logFormContainer{
-
-    width: 50%;
-    height: 100%;
-    margin: auto;
     background-color: $zoneVideoColor;
-    h1{
-        text-align: center;
-    }
+    height: 50%;
+    margin: 35% 0;
     
-}
-
-input{
-    box-sizing: border-box;
-
-   }
-
-.logForm{
-   background-color: beige;
-   width: 50%;
-   display: grid;
-   margin: auto;
-   /*
-   & > * {
-    display: grid;
-    grid-auto-flow: row;
-    width: 50%;
-   &>*{
-    grid-row: 1;
-    max-width: 80%;
-    display: inline-block;
-   }
-   */
-
+    h1{
+       width: 50%;
+       margin: auto;
+    }
+   
    }
    
    
+   .logForm{
+     display: grid;
+     width: 80%;
+     margin: auto;
+    
+     div > * {
+       display: inline-block;
+       width: 70%;
+       margin: 2% 0;
+     }
+     svg{
+       width: 15%;
+     }
+
+
+     button{
+        width: 75%;
+        margin: 0 auto;
+        background: linear-gradient( to right , rgb(83, 124, 186) , rgb(51, 186, 220)) ;
+        color: white;
+        border: none;
+        font-weight: 600;
+        padding: 5%;
+        font-family: $mainFont;
+     }
+      }
 

@@ -1,14 +1,14 @@
 import React from 'react';
-import Door from './Door';
+
 
 // animation qui evolue lorsque l'utilisateur rentre un champ 
 
 
-const OtherSide = () => {
+const OtherSide = (props) => {
 
     return (
-        <div className='otherside'>
-            <Door></Door>
+        <div className={props.className}>
+            {props.children}
            
         </div>
     );

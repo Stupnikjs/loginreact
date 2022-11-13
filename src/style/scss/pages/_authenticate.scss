@@ -36,15 +36,15 @@
              width: 60%; 
              border: 4px solid black;
              display: flex;
+             
              perspective: 1200px;
              transform-style: preserve-3d;
-            box-shadow: inset 2rem 2rem  rgb(37, 33, 33), inset -2rem -2rem  rgb(37, 33, 33), inset 3rem 3rem  $zoneVideoColor,
-             inset -3rem -3rem  $zoneVideoColor,
-
+             box-shadow: inset .2rem .2rem  rgb(37, 33, 33), inset .2rem .2rem  rgb(37, 33, 33); 
+            
           }
           
           .door {
-            background-color: rgb(178, 203, 176);
+            background: linear-gradient(to right , $zoneVideoColor, rgb(113, 25, 25)); 
             flex-grow: 1;
             // transform-style: preserve-3d;
             transform-origin: left center;
@@ -65,12 +65,19 @@
             transform-style: preserve-3d;  
             transform: rotateY(180deg);
           }
-          /*
-          .doorframe:focus .door,
-          .doorframe:hover .door {
+
+          .stage1{
+            transform: rotate3d(0, 1, 0, -30deg)
+          }
+          .stage2 {
            transform: rotate3d(0, 1, 0, -60deg);
           } 
-          */
+        
+          .stage3 {
+           transform: rotate3d(0, 1, 0, -90deg);
+          } 
+        
+       
           
 
     }

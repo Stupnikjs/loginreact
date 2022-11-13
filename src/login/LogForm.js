@@ -4,7 +4,7 @@ import { faEnvelope, faPerson, faLock } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
 
 const LogForm = (props) => {
-    const emailReg = "[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}"
+     // const emailReg = "[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}"
 
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
@@ -19,9 +19,13 @@ const LogForm = (props) => {
         setPage(window.location.href.substring(indexSlash+5)); 
         if (props.type === "login") setFetchUrl("http://localhost:4000/signin") 
         if (props.type === "signin") setFetchUrl("http://localhost:4000/login") 
+        if (username === "" && email === "" && password === "") props.setFormStage(0)
+        if (username !== "") props.setFormStage(1)
+        if (username!== "" && email !== "") props.setFormStage(2)
+        if (username!== "" && email !== "" && password !== "") props.setFormStage(3)
        
 
-    }, [page, props]) 
+    }, [page, props, email, username, password]) 
 
     
    
@@ -73,6 +77,8 @@ const LogForm = (props) => {
             })      
      
     }
+
+
 
     return (
             <div className='logFormContainer'>

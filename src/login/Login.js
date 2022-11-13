@@ -1,13 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import LogForm from './LogForm';
 
 import OtherSide from './OtherSide';
+import Door from './Door';
 
 
 
 const Login = (props) => {
-    
+    const [formStage, setFormStage] = useState(0)
 
     useEffect(() => {
       
@@ -17,9 +18,11 @@ const Login = (props) => {
             <div className='authenticate'>
                 <div className='mainSquare'>
                     <div className='logcontainer'>
-                    <LogForm type={props.type}></LogForm>
+                    <LogForm setFormStage={setFormStage} type={props.type}></LogForm>
                     </div>
-                    <OtherSide></OtherSide>
+                    <OtherSide className='otherside'>
+                        <Door formStage={formStage}></Door>
+                    </OtherSide>
                 </div>
                 
             </div>

@@ -4,12 +4,12 @@ import { useState } from 'react';
 import Game from './Game';
 
 
-const ZoneGame = (props) => {
+const ZoneGame = () => {
 
   
     return (
         <div className='zoneGame'>
-           <h1>Vos parties en Cours </h1>
+           <h1> Jeux </h1>
            <div className='gameChoice'>
             <Game name="morpion"></Game>
             <Game name="echec"></Game>

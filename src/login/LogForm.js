@@ -17,8 +17,13 @@ const LogForm = (props) => {
        
         let indexSlash = window.location.href.indexOf('3000'); 
         setPage(window.location.href.substring(indexSlash+5)); 
-        if (props.type === "login") setFetchUrl("http://localhost:4000/signin") 
-        if (props.type === "signin") setFetchUrl("http://localhost:4000/login") 
+
+        console.log(username)
+
+        if (props.type === "signin") setFetchUrl("http://localhost:4646/signin") 
+        if (props.type === "login") setFetchUrl("http://localhost:4646/login") 
+
+
         if (username === "" && email === "" && password === "") props.setFormStage(0)
         if (username !== "") props.setFormStage(1)
         if (username!== "" && email !== "") props.setFormStage(2)
@@ -31,7 +36,7 @@ const LogForm = (props) => {
    
     const getData = () => {
         let data = {
-            "name" : username, 
+            "username" : username, 
             "email" : email, 
             "password" : password, 
         }
@@ -49,7 +54,7 @@ const LogForm = (props) => {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: 'include', // include, *same-origin, omit
+        // credentials: 'include', // include, *same-origin, omit
         headers: {
         'Content-Type': 'application/json', 
         'Access-Control-Allow-Credentials': true, 
@@ -64,15 +69,17 @@ const LogForm = (props) => {
         e.preventDefault()
         const datatopost = getData()
         fetchOptions.body = datatopost
-        console.log(fetchUrl)
         // faire varier l'url en fontion du state 
              fetch(fetchUrl,fetchOptions)
             .then( data => data.json() )
             .then( data => {
-                if (page === "login") { 
-                window.location.href = `http://localhost:3000/profile/${data}`}
+                console.log(data)
+                if (page === "login" && data.userid != undefined) { 
+                sessionStorage.setItem("jwt", JSON.stringify(data.token))
+                window.location.href = `http://localhost:3000/profile/${data.userid}`
+            }
                 else if (page === "signin") {  
-                    window.location.href = `http://localhost:3000/login`
+                   // window.location.href = `http://localhost:3000/login`
                 }
             })      
      

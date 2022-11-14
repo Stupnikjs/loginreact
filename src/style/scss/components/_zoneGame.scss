@@ -3,7 +3,7 @@
         text-align: center;
     }
    
-    height: 50vh;
+    height: 40vh;
     max-width: 800px; 
     width: 90%;
     justify-content: center;
@@ -11,7 +11,7 @@
     flex-wrap: wrap;
       /*repeat(auto, minmax(20px ))*/
     background-color: $zoneVideoColor;
-    margin: auto;
+    margin: 5% auto;
    padding: 2%;
    border: 4px black;
    border-style: ridge; 

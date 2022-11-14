@@ -1,15 +1,10 @@
-import React, { useEffect} from 'react';
-import { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React from 'react';
 import Header from '../components/Header';
 import ZoneGame from '../components/ZoneGame';
-import ZoneScore from '../components/ZoneScore';
+import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
-
-
-
-const Profile = (props) => {
-
+const GamePage = () => {
     const {id} = useParams()
     const [user, setUser] = useState('')
     
@@ -40,12 +35,11 @@ const Profile = (props) => {
     },[id] )
 
     return (
-        <div className='profile'>
-           <Header user={user}></Header>
-           <Link className="linktogame" to={`/profile/game/${id}`}>Jouez Maintenant</Link>
-           <ZoneScore />    
+        <div>
+            <Header user={user}></Header>
+            <ZoneGame></ZoneGame>
         </div>
     );
 };
 
-export default Profile;
+export default GamePage;

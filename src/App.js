@@ -9,6 +9,7 @@ import Tictactoe from "./tictactoe/Tictactoe";
  
 
 import "./style/scss/main.scss"
+import GamePage from "./pages/GamePage";
 
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login type="login" />}></Route>
         <Route path="/signin" element={<Login type="signin" />}></Route>    
-        <Route path="/profile" element={<Profile></Profile>}/>
+        <Route path="/profile/:id" element={<Profile></Profile>}/>
+        <Route path="/profile/game/:id" element={<GamePage/>}/>
         <Route path="/morpion" element={<GamePlatform game="tictactoe"></GamePlatform>}/>
         <Route path="/echec" element={<GamePlatform game="chess"></GamePlatform>}/>
       </Routes>

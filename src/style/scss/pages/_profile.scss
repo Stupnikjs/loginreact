@@ -5,5 +5,15 @@
     --backgroundColor : rgb(30, 85, 95); 
     background-color: var(--backgroundColor);
     height: 130vh;
+    display: flex;
+    flex-direction: column;
 }
 
+.linktogame{
+    background-color: aliceblue;
+    border: 2px solid black;
+    padding: 2%;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+}

@@ -12,7 +12,7 @@ const Tictactoe = (props) => {
     
     useEffect(()=> {
         // rows 
-        console.log(soloTurn)
+        
         if (grid[0] === grid[1] && grid[1] === grid[2] && grid[0] !== "" ) setGameOver(true)
         if (grid[3] === grid[4] && grid[4] === grid[5] && grid[3] !== "" ) setGameOver(true)
         if (grid[6] === grid[7] && grid[7] === grid[8] && grid[6] !== ""  ) setGameOver(true)
@@ -27,7 +27,6 @@ const Tictactoe = (props) => {
         if(!soloTurn){
             
             let randomNum = Math.floor(Math.random())
-            
             let emptyCaseArray = grid.map((element, index) => {
                    
                 if (element === "") return  { index: index, 

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPerson, faLock } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import { useCallback } from 'react';
 
 const LogForm = (props) => {
      // const emailReg = "[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}"
@@ -17,8 +18,6 @@ const LogForm = (props) => {
        
         let indexSlash = window.location.href.indexOf('3000'); 
         setPage(window.location.href.substring(indexSlash+5)); 
-
-        console.log(username)
 
         if (props.type === "signin") setFetchUrl("http://localhost:4646/signin") 
         if (props.type === "login") setFetchUrl("http://localhost:4646/login") 
@@ -44,11 +43,11 @@ const LogForm = (props) => {
         return JSON.stringify(data)
     }
   
-    const getInputValue = (e) => {
+    const getInputValue = useCallback( function (e){
         if(e.target.name === "username") setUsername(e.target.value)
         if(e.target.name === "email") setEmail(e.target.value)
         if(e.target.name === "password") setPassword(e.target.value) 
-    }
+    }, [username, email, password]) 
 
     const fetchOptions = {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.

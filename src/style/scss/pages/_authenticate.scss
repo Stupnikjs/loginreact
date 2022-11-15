@@ -1,6 +1,6 @@
 .authenticate{
   height: 100vh;
-  background-color: lightyellow;
+  background-color: rgb(17, 5, 27);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,9 +21,6 @@
 }
 
 
-   
-   
-
 
 .otherside{
     background-color: $backgroundGreen;
@@ -39,7 +36,7 @@
         .doorframe {
              height: 70%;
              width: 60%; 
-             border: 4px solid black;
+             border: 4px solid rgb(18, 54, 102);
              display: flex;
              perspective: 1200px;
              transform-style: preserve-3d;
@@ -52,7 +49,7 @@
           /* animated with react */
 
           .door {
-            background: linear-gradient(to right , $zoneVideoColor, rgb(113, 25, 25)); 
+            background: linear-gradient(to right , $zoneVideoColor, rgb(83, 154, 172)); 
             flex-grow: 1;
             // transform-style: preserve-3d;
             transform-origin: left center;

@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../components/Header';
-import ZoneGame from '../components/ZoneGame';
+import Header from './Header';
+import ZoneGame from './ZoneGame';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 

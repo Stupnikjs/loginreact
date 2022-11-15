@@ -1,15 +1,16 @@
 import { BrowserRouter,Routes,Route } from "react-router-dom";
-import SecretWrapper from "./components/SecretWrapper";
+
+
 import Login from "./login/Login";
-import Profile from "./pages/Profile";
-import GamePlatform from "./pages/GamePlatform";
-import Tictactoe from "./tictactoe/Tictactoe";
+import Profile from "./profile/Profile";
+import GamePlatform from "./profile/GamePlatform";
+import GamePage from "./profile/GamePage";
 
 // <Route path="/profile/:id" element={<SecretWrapper />}></Route>
  
 
 import "./style/scss/main.scss"
-import GamePage from "./pages/GamePage";
+
 
 
 function App() {

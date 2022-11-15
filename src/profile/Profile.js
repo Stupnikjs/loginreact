@@ -1,9 +1,9 @@
 import React, { useEffect} from 'react';
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import Header from '../components/Header';
-import ZoneGame from '../components/ZoneGame';
-import ZoneScore from '../components/ZoneScore';
+import Header from './Header';
+import ZoneGame from './ZoneGame';
+import ZoneScore from './ZoneScore';
 
 
 
@@ -13,8 +13,6 @@ const Profile = (props) => {
     const {id} = useParams()
     const [user, setUser] = useState('')
     
-    
-   
     
     const fetchData = async (url, method, data) => {
         return fetch( url , {

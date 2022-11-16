@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import Header from '../profile/Header';
 import ZoneGame from './ZoneGame';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -27,7 +27,7 @@ const GamePage = () => {
     }
 
     useEffect( () => {
-        console.log(sessionStorage.getItem("jwt"))
+        console.log(id)
         fetchData(`http://localhost:4646/profile/${id}`, "GET") 
         .then( data => data.json())
         .then( data => setUser(data.user))
@@ -37,7 +37,8 @@ const GamePage = () => {
     return (
         <div>
             <Header user={user}></Header>
-            <ZoneGame></ZoneGame>
+            <h1>Game page Component</h1>
+            <ZoneGame userid={id}></ZoneGame>
         </div>
     );
 };

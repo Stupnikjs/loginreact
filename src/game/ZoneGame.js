@@ -1,17 +1,19 @@
 import React from 'react';
 
 import { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import Game from './Game';
 
 
-const ZoneGame = () => {
+const ZoneGame = (props) => {
 
-  
+    
+
     return (
         <div className='zoneGame'>
            <h1> Jeux </h1>
            <div className='gameChoice'>
-            <Game name="morpion"></Game>
+            <Game name="morpion" userid={props.userid}></Game>
             <Game name="echec"></Game>
            </div>
            

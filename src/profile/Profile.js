@@ -2,7 +2,7 @@ import React, { useEffect} from 'react';
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Header from './Header';
-import ZoneGame from './ZoneGame';
+import ZoneGame from '../game/ZoneGame';
 import ZoneScore from './ZoneScore';
 
 
@@ -41,7 +41,7 @@ const Profile = (props) => {
         <div className='profile'>
            <Header user={user}></Header>
            <Link className="linktogame" to={`/profile/game/${id}`}>Jouez Maintenant</Link>
-           <ZoneScore />    
+           <ZoneScore scores={user.scores}/>    
         </div>
     );
 };

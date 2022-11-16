@@ -13,8 +13,9 @@ const Game = (props) => {
 
     return (
         <div className='gameCard'>
+            <p>Game component</p>
             <button className='btnGameCard' onClick={handleClick} >{props.name}</button>    
-            <Link to={"/" + props.name} className={display ? "" : "notchoosen"}> Partie solo </Link>
+            <Link to={`/profile/${props.userid}/` + props.name} className={display ? "" : "notchoosen"}> Partie solo </Link>
             <Link className={display ? "" : "notchoosen"} > Partie contre un contact </Link>
 
         </div>

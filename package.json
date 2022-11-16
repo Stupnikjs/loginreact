@@ -1,6 +1,7 @@
 {
   "name": "frontgo",
   "version": "0.1.0",
+  "homepage": "https://stupnikjs.github.io/loginreact",
   "private": true,
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
@@ -19,6 +20,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
@@ -43,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "jest": "^27.5.1"
   }
 }

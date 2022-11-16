@@ -6,11 +6,12 @@
     background-color: black; 
     color: white; 
     height: 10vh;
-    margin-bottom: 5%;
     padding-left: 5%;
+    margin-bottom: 5%;
 
     h1{
         grid-row: 1;
+        margin: 0;
     }
     a{
         text-decoration: none;
@@ -26,13 +27,13 @@
 
 .btnlogout{
     grid-row: 1;
-    height: 70%;
+    height: 60%;
     margin: auto 0;
     width: 90%;
     border: 2px solid $zoneVideoColor;
     background-color: $backgroundGreen;
-    font-weight: 700;
-    font-size: 1rem;
+    font-weight: 600;
+    font-size: .8rem;
     position: relative;
     z-index: 1;
 

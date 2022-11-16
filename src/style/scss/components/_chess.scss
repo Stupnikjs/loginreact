@@ -1,8 +1,11 @@
+$chessPieceColor:  rgb(128, 161, 8); 
+
 .chessBoard{
+    border: 15px solid rgb(107, 26, 26);
     margin: auto;
     display: grid;
-    height: 70vh;
-    width: 70vw;
+    height: 60vh;
+    width: 50vw;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
 }
@@ -13,6 +16,14 @@
 .black{
     background-color: black;
 }
+
+.piecewhite{
+    color: white;
+}
+.pieceblack{
+    color: black;
+}
+
 .piece{
     display: flex;
     justify-content: center;
@@ -20,10 +31,9 @@
 }
 
 .chesspiece{
-    font-size: 3rem;
-
-    stroke: rgb(98, 136, 120);
-    stroke-width: 10px;
+    font-size: 2.2em;
+    stroke: $chessPieceColor;
+    stroke-width: 20px;
 
     
    

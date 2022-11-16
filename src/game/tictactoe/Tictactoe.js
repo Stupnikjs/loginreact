@@ -4,13 +4,31 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useCallback } from 'react';
 
+
+const fetchOptions = {
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    // credentials: 'include', // include, *same-origin, omit
+    headers: {
+    'Content-Type': 'application/json', 
+    'Access-Control-Allow-Credentials': true, 
+    'Accept': "*/*"
+
+},
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: ""  // body data type must match "Content-Type" header
+}
+
+
 const Tictactoe = (props) => {
 
     
     const [grid, setGrid]= useState(["", "", "", "", "", "" ,"", "", ""])
     const [gameover, setGameOver] = useState(false)
     const [soloTurn, setSoloTurn] = useState(true)
-    // const [winner, setWinner] = useState(false)
+    
 
     const setGameOverifCondition = (grid) => {
         console.log("render") 
@@ -29,7 +47,7 @@ const Tictactoe = (props) => {
     }
     
     useEffect(()=> {
-       
+        console.log(props)
         setGameOverifCondition(grid)
 
         if(!soloTurn){
@@ -60,14 +78,13 @@ const Tictactoe = (props) => {
 
         if (gameover) {
            
-           const tosend = {
-            userid : props.userid, 
-            win : true, 
+            fetch(`http://localhost:4646/${props.userid}/tictactoe`, fetchOptions).then(data => data.json()).then(resp => console.log(resp))
+
 
            }
            
         }
-    },[grid, gameover])
+    ,[grid, gameover])
 
     return (
         <>

@@ -1,11 +1,8 @@
-@keyframes mooveTarget {
-    0% {
-        transform: translateY(0%);
-    }
-    50%{
-        transform: translateY(500%) translate3d(5, 5, 5);
+@keyframes slide {
+    0%{
+        transform: translateX(-10%);
     }
     100%{
-        transform: translateY(0%);
+        transform: translateX(0%);
     }
 }

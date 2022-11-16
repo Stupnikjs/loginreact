@@ -3,7 +3,7 @@ import { BrowserRouter,Routes,Route } from "react-router-dom";
 
 import Login from "./login/Login";
 import Profile from "./profile/Profile";
-import GamePlatform from "./profile/GamePlatform";
+import GamePlatform from "./profile/GameBoard";
 import GamePage from "./profile/GamePage";
 
 // <Route path="/profile/:id" element={<SecretWrapper />}></Route>

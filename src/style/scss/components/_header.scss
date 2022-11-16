@@ -12,6 +12,15 @@
     h1{
         grid-row: 1;
     }
+    a{
+        text-decoration: none;
+        color: $zoneVideoColor;
+    }
+}
+
+.headeruser{
+    display: flex;
+    align-items: center;
 }
 
 
@@ -20,9 +29,10 @@
     height: 70%;
     margin: auto 0;
     width: 90%;
-    border: 2px solid white;
-    background-color: $zoneVideoColor;
-    font-weight: 600;
+    border: 2px solid $zoneVideoColor;
+    background-color: $backgroundGreen;
+    font-weight: 700;
+    font-size: 1rem;
     position: relative;
     z-index: 1;
 
@@ -37,7 +47,7 @@
         transition: opacity 250ms;
         z-index: -1;
         opacity: 0;
-        background-color: rgb(226, 252, 166);
+        background-color: rgb(206, 43, 43);
         
     }
     &:hover{

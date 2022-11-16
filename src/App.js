@@ -17,12 +17,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<Login type="login" />}></Route>
+        <Route path="/" element={<Login type="login" />}></Route>
         <Route path="/signin" element={<Login type="signin" />}></Route>    
         <Route path="/profile/:id" element={<Profile></Profile>}/>
         <Route path="/profile/game/:id" element={<GamePage/>}/>
         <Route path="/profile/:id/morpion" element={<GamePlatform game="tictactoe"></GamePlatform>}/>
         <Route path="/profile/:id/echec" element={<GamePlatform game="chess"></GamePlatform>}/>
+        <Route path="/profile/:id/roulette" element={<GamePlatform game="roulette"></GamePlatform>}/>
       </Routes>
     </BrowserRouter>
   );

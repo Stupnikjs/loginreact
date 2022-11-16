@@ -16,6 +16,9 @@ function reducer(state, action){
     switch(action.type){
         case "lightpiece": return (state.map((element, index ) => {
             return element.map((elt, ind) => {
+                /* test if case is empty 
+                *
+                */
                 if (testequality(action.coordinates , index, ind)) {elt.lighted = true; return elt }
                 else return elt
             })

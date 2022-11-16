@@ -15,6 +15,7 @@ const ZoneGame = (props) => {
            <div className='gameChoice'>
             <Game name="morpion" userid={props.userid}></Game>
             <Game name="echec"></Game>
+            <Game name="roulette"></Game>
            </div>
            
 

@@ -17,9 +17,10 @@ body{
 @import "./pages/gameBoard"; 
 @import "./components/header"; 
 @import "./components/logForm"; 
-@import "./components/zoneGame";
+@import "./game/zoneGame";
 @import "./components/zoneScore";
-@import "./components/tictactoe";  
-@import "./components/chess";  
+@import "./game/tictactoe";  
+@import "./game/chess";  
+@import "./game/roulette";  
 
 
